@@ -17,8 +17,8 @@ import ChatBox from './components/chatBox.vue';
   },
 })
 export default class App extends Vue {
-  private user1: any = { userName:'Homer', avatar:'homer.png' };
-  private user2: any = { userName:'Marge', avatar:'marge.jpeg' };
+  private user1: any = { userName: 'Homer', avatar: 'homer.png' };
+  private user2: any = { userName: 'Marge', avatar: 'marge.jpeg' };
 }
 </script>
 
@@ -28,12 +28,10 @@ html, body, #app {
   margin: 0;
   width: 100%;
   height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
 }
 
 #chatBoxContainer {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;

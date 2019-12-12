@@ -4,12 +4,12 @@ import { Module, Mutation, VuexModule } from 'vuex-module-decorators';
 export default class ChatBoxModule extends VuexModule {
   private messages: any[] = [];
 
-@Mutation
-ADD_NEW_MESSAGE(message: any) {
-    this.messages.push(message);
-}
+    @Mutation
+    ADD_NEW_MESSAGE(message: any) {
+        this.messages.unshift(message);
+    }
 
-get GET_MESSAGES() {
-    return this.messages;
-}
+    get GET_MESSAGES() {
+        return this.messages;
+    }
 }
