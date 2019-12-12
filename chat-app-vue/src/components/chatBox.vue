@@ -1,6 +1,6 @@
 <template>
   <div class="chatBox">
-    <div class="HeaderChat"> Chat with {{this.user.userName}} </div>
+    <div class="HeaderChat"> Talk to {{toUser}} </div>
     <div class="messages">
       <div v-for="(msg, index) in GET_MESSAGES" v-bind:key="index" 
             class="message-container" 
@@ -40,6 +40,7 @@ const chat = getModule(ChatModule, store);
 
 export default class ChatBox extends Vue {
   @Prop() user!: any;
+  @Prop() toUser!: any;
   private message: string  = '';
   private submit() {
     if (!this.message) return;

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <div id="chatBoxContainer">
-        <ChatBox :user='user1'/>
-        <ChatBox :user='user2'/>
+        <ChatBox :user='user1' :toUser='user2.userName'/>
+        <ChatBox :user='user2' :toUser='user1.userName'/>
     </div>
   </div>
 </template>
